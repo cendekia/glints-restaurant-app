@@ -1,16 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Routes, Route } from "react-router-dom"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import Home from "./components/pages/Home"
 
-import Home from './components/pages/Home';
-
-import './App.css';
+import "./App.css"
 
 function App() {
   return (
     <>
-      <Home />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
